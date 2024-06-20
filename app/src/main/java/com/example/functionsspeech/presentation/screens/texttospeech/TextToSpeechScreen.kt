@@ -15,7 +15,7 @@ import com.example.functionsspeech.presentation.screens.texttospeech.components.
 import com.example.functionsspeech.presentation.screens.texttospeech.components.ShowError
 
 @Composable
-fun TextToSpeech(
+fun TextToSpeechScreen(
     viewModel: TextToSpeechViewModel
 ) {
     val text: String by viewModel.text.observeAsState(initial = "")
