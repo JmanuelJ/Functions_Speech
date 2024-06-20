@@ -54,9 +54,10 @@ fun BoxTextField(text: String, textInput: (String) -> Unit) {
             .width(400.dp)
             .height(200.dp),
     ) {
-        DefaultTextField(modifier = Modifier
-            .fillMaxSize()
-            , text = text, textInput = textInput)
+        DefaultTextField(
+            modifier = Modifier
+                .fillMaxSize(), text = text, textInput = textInput
+        )
     }
 }
 

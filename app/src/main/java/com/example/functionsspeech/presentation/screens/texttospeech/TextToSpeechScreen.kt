@@ -3,8 +3,8 @@ package com.example.functionsspeech.presentation.screens.texttospeech
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.example.functionsspeech.domain.model.Response
@@ -15,20 +15,22 @@ import com.example.functionsspeech.presentation.screens.texttospeech.components.
 import com.example.functionsspeech.presentation.screens.texttospeech.components.ShowError
 
 @Composable
-fun TextToSpeech(
+fun TextToSpeechScreen(
     viewModel: TextToSpeechViewModel
 ) {
-    val text: String by viewModel.text.observeAsState(initial = "")
+    val state by viewModel.state.collectAsState()
 
     Column {
         HeaderTtp()
-        when(val response = viewModel.speechResponse){
+        when (val response = state.speechResponse) {
             is Response.Error -> {
                 ShowError(errorMessage = response.errorMessage)
             }
+
             Response.Loading -> {
                 ProgressBar(modifier = Modifier.fillMaxSize())
             }
+
             is Response.Success -> {
                 response.data?.let {
                     viewModel.initSound(LocalContext.current, it)
@@ -42,9 +44,10 @@ fun TextToSpeech(
                     }
                 )
             }
+
             null -> {
                 CustomTextField(
-                    text = text,
+                    text = state.text,
                     textInput = {
                         viewModel.onTexInput(it)
                     },
