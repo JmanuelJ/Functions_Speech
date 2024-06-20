@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Diane speech</string>
+    <string name="app_name">Functions IA</string>
     <string name="title_text_to_speech">Texto a discurso</string>
     <string name="title_speech_to_speech">Discurso a discurso</string>
     <string name="add_text">Ingresa el texto a convertir</string>

@@ -9,7 +9,6 @@ import javax.inject.Inject
 
 class ServiceRepositoryImpl @Inject constructor(
     private val api: ApiService,
-    private val retrofit: Retrofit
 ): ServiceRepository {
 
     override suspend fun textToSpeechService(

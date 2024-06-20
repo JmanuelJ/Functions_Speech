@@ -1,21 +1,20 @@
 package com.example.functionsspeech.presentation.components
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.functionsspeech.presentation.ui.theme.color_five
+import com.example.functionsspeech.presentation.ui.theme.colorGray
 
 @Composable
-fun ProgresBar() {
+fun ProgressBar(modifier: Modifier = Modifier) {
     Box(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier,
         contentAlignment = Alignment.Center
     ){
         CircularProgressIndicator(
-            color = color_five
+            color = colorGray
         )
     }
 }

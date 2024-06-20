@@ -1,4 +1,5 @@
 package com.example.functionsspeech.presentation.screens.texttospeech
+
 import android.content.Context
 import android.media.MediaPlayer
 import androidx.compose.runtime.getValue
@@ -19,21 +20,17 @@ import java.io.File
 import javax.inject.Inject
 
 @HiltViewModel
-class TextToSpeechViewModel  @Inject constructor(
+class TextToSpeechViewModel @Inject constructor(
     private val servicesUseCases: ServicesUseCases
 ) : ViewModel() {
     private val createFileSound = CreateFileSound()
-    lateinit var  mediaPlayer: MediaPlayer
-    lateinit var file: File
+    private lateinit var mediaPlayer: MediaPlayer
+    private lateinit var file: File
 
     private val _text = MutableLiveData<String>()
     val text: LiveData<String> = _text
 
-    private val _playerEnable = MutableLiveData<Boolean>()
-    val playerEnable: LiveData<Boolean> = _playerEnable
-
-    private val _btnPlay = MutableLiveData<Boolean>()
-    val btnPlay: LiveData<Boolean> = _btnPlay
+    private var btnPlay by mutableStateOf(false)
 
     var speechResponse by mutableStateOf<Response<ByteArray?>?>(null)
 
@@ -41,55 +38,55 @@ class TextToSpeechViewModel  @Inject constructor(
         _text.value = text
     }
 
-    fun onPlayerEnable() {
-        if(_playerEnable.value!! ){
-            _playerEnable.value = false
-        }
-        else{
-            _playerEnable.value = true
-        }
-    }
-
-    fun onButtonPlay(state: Boolean) {
-        _btnPlay.value = state
-    }
-
     fun getSpeech() {
         val obj = createBody()
         viewModelScope.launch {
             speechResponse = Response.Loading
-            val result = servicesUseCases.textToSpeech( VOICE_NUMBER_ONE ,obj)
+            val result = servicesUseCases.textToSpeech(VOICE_NUMBER_ONE, obj)
             speechResponse = result
         }
     }
 
     private fun createBody(): TextToSpeechData {
         return TextToSpeechData(
-            text = text.value!!,
-            modelid = "eleven_monolingual_v1",
+            text = text.value ?: "",
+            modelid = "eleven_monolingual_v1"
         )
     }
 
-    fun initSound(context: Context, array: ByteArray){
+    fun initSound(context: Context, array: ByteArray) {
         file = getFileSound(array)
-        val fileUri = createFileSound.createUri(file,context)
+        val fileUri = createFileSound.createUri(file, context)
         mediaPlayer = MediaPlayer()
-        mediaPlayer.setDataSource(context,fileUri)
+        mediaPlayer.setDataSource(context, fileUri)
     }
 
-
-    fun getFileSound(array: ByteArray): File{
+    private fun getFileSound(array: ByteArray): File {
         return createFileSound.createSound(array)
     }
 
-    fun playPauseSound(){
-        if(btnPlay.value!!){
+    fun onValuePlay() {
+        onButtonPlay()
+        onPlayPauseSound()
+    }
+
+    private fun onButtonPlay() {
+        btnPlay = btnPlay != true
+    }
+
+    private fun onPlayPauseSound() {
+        if (btnPlay) {
             mediaPlayer.prepare()
             mediaPlayer.start()
-        } else{
+        } else {
             mediaPlayer.stop()
             mediaPlayer.release()
         }
+    }
+
+    fun onReset(){
+        speechResponse = null
+        onTexInput("")
     }
 
 }
