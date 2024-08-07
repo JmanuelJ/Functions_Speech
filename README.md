@@ -1,4 +1,6 @@
+
 # :iphone: App: Convierte texto a voz :computer: :sound:
+
 
 ## Objetivo
 ### Convertir el texto ingresado en audio.
@@ -14,14 +16,15 @@
 ### MVVM
 
 ## Libs
-*Retrofit
-*Okhttp
-*Dagger Hilt
-*Constraint
+### *Retrofit
+### *Okhttp
+### *Dagger Hilt
+### *Constraint
 
 
 ## API
-### [ElevenLabs: ](https://elevenlabs.io/docs/api-reference/text-to-speech)
+### [ElevenLabs:]([url](https://elevenlabs.io/docs/api-reference/text-to-speech))
+
 
 ## Licencia
 ### MIT - Free software!
