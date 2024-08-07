@@ -4,12 +4,14 @@
 Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
 
 
-## Ejemplo de ejecucion
+## Pantallas
 <div align="center">
   <img src="https://github.com/JmanuelJ/Resources-Myrepos/blob/main/Functions%20Speech-20240807T201426Z-001/Functions%20Speech/Main-Screen.jpg" height="250" alt="main screen"  />
   <img src="https://github.com/JmanuelJ/Resources-Myrepos/blob/main/Functions%20Speech-20240807T201426Z-001/Functions%20Speech/Second.Screen.jpg" height="250" alt="second screen"  />
 </div>
 
+## Ejemplo de jecucion 
+[![](https://markdown-videos.deta.dev/youtube/gajkLobZIeI?si=dBHOi6DP4QcyRZ6D)](https://youtube.com/shorts/gajkLobZIeI?si=dBHOi6DP4QcyRZ6D)
 
 ## Arquitectura 
 ### MVVM
