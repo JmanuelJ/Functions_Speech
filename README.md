@@ -13,19 +13,18 @@
 ## Arquitectura 
 ### MVVM
 
-##Libs
+## Libs
 *Retrofit
 *Okhttp
 *Dagger Hilt
 *Constraint
 
 
-##API
-###[ElevenLabs: ](https://elevenlabs.io/docs/api-reference/text-to-speech)
+## API
+### [ElevenLabs: ](https://elevenlabs.io/docs/api-reference/text-to-speech)
 
-##Licencia
-### MIT 
-### Free software!
+## Licencia
+### MIT - Free software!
 
 
 
