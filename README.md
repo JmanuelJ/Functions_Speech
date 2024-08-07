@@ -4,11 +4,6 @@
 Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
 
 
-## Objetivo
-### Convertir el texto ingresado en audio.
-
-
-
 ## Ejemplo de ejecucion
 <div align="center">
   <img src="https://github.com/JmanuelJ/Resources-Myrepos/blob/main/Functions%20Speech-20240807T201426Z-001/Functions%20Speech/Main-Screen.jpg" height="150" alt="stats graph"  />
@@ -20,10 +15,10 @@ Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
 ### MVVM
 
 ## Libs
-### * Retrofit
-### * Okhttp
-### * Dagger Hilt
-### * Constraint
+#### * Retrofit
+#### * Okhttp
+#### * Dagger Hilt
+#### * Constraint
 
 
 ## API Reference
@@ -34,18 +29,18 @@ Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
   POST: /v1/text-to-speech/{voice_id}/stream
 ```
 Header
-|--------------------------------------------------|
+|------------------------------------------------------|
 | `xi-api-key` | `string` | **Requerido:**. Tu API key |
 
 
 Body
-|--------------------------------------------------|
+|------------------------------------------------------|
 | `text` | `string` | **Requerido:** Texto a convertir |
 
 
 Path
 |--------------------------------------------------|
-| `voice_id` | `string` | **Requiere**. Voice|
+| `voice_id` | `string` | **Requiere**. Voice      |
 
 
 La API puede recibir mas parametros pero solo considere los obligatorios para relizar este ejemplo, para mas informacion al respecto consulta la documentacion en la pagina ofical de ElevenLabs.
