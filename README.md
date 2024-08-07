@@ -42,13 +42,17 @@ Header
 
 
 Body
-|--------|----------|----------------------------------|
-| `text` | `string` | **Requerido:** Texto a convertir |
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  `text`  | `string` | **Requerido:** Texto a convertiry |
 
 
 Path
-|------------|----------|--------------------------|
-| `voice_id` | `string` | **Requiere**. Voice      |
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  `voice_id`  | `string` | **Requiere**. Modelo de voz  |
 
 
 La API puede recibir mas parametros pero solo considere los obligatorios para relizar este ejemplo, para mas informacion al respecto consulta la documentacion en la pagina ofical de ElevenLabs.
