@@ -26,24 +26,29 @@ Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
 #### Text To Speech Streaming
 
 ```http
+  https://api.elevenlabs.io
   POST: /v1/text-to-speech/{voice_id}/stream
 ```
 Header
-|------------------------------------------------------|
+|--------------|---------------------------------------|
 | `xi-api-key` | `string` | **Requerido:**. Tu API key |
 
 
 Body
-|------------------------------------------------------|
+|--------|---------------------------------------------|
 | `text` | `string` | **Requerido:** Texto a convertir |
 
 
 Path
-|--------------------------------------------------|
+|------------|-------------------------------------|
 | `voice_id` | `string` | **Requiere**. Voice      |
 
 
 La API puede recibir mas parametros pero solo considere los obligatorios para relizar este ejemplo, para mas informacion al respecto consulta la documentacion en la pagina ofical de ElevenLabs.
+
+### Api
+
+[ElevenLabs: ](https://elevenlabs.io/docs/api-reference/streaming) https://elevenlabs.io/docs/api-reference/streaming
 
 
 ## Licencia
