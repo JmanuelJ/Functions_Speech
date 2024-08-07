@@ -11,7 +11,7 @@ Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
 </div>
 
 ## Ejemplo de jecucion 
-[![](https://markdown-videos.deta.dev/youtube/gajkLobZIeI)](https://youtube.com/shorts/gajkLobZIeI?si=dBHOi6DP4QcyRZ6D)
+[Video en Youtube: ](https://youtube.com/shorts/gajkLobZIeI?si=dBHOi6DP4QcyRZ6D) https://youtube.com/shorts/gajkLobZIeI?si=dBHOi6DP4QcyRZ6D
 
 ## Arquitectura 
 ### MVVM
