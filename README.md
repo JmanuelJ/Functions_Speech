@@ -34,9 +34,11 @@ Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
   https://api.elevenlabs.io
   POST: /v1/text-to-speech/{voice_id}/stream
 ```
-Header           Tipo       Descripcion
-|--------------|----------|----------------------------|
-| `xi-api-key` | `string` | **Requerido:**. Tu API key |
+Header  
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  `xi-api-key`  | `string` | **Requerido:**. Tu API key |
 
 
 Body
