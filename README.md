@@ -1,17 +1,19 @@
 
-# :iphone: App: Convierte texto a voz :computer: :sound:
+# :iphone: App: Convierte texto a voz:sound:
+
+Convierte texto a voz de manera rapida y eficiente, con la ayuda de ElevenLabs.
 
 
 ## Objetivo
 ### Convertir el texto ingresado en audio.
 
-## Patallas
-<div align="center">
-  <img src="https://drive.google.com/file/d/16yWifljQdn2GAxxbe-C0apXKSuDRf3y-/view?usp=sharing" height="150" alt="Main screen"  />
-  <img src="https://drive.google.com/file/d/17-GgAeSix-VYtyrzDTouXz26TN8zyp0w/view?usp=sharing" height="150" alt="Second screen"  />
-</div>
+
 
 ## Ejemplo de ejecucion
+<div align="center">
+  <img src="https://github.com/JmanuelJ/Resources-Myrepos/blob/main/Functions%20Speech-20240807T201426Z-001/Functions%20Speech/Main-Screen.jpg" height="150" alt="stats graph"  />
+  <img src="https://github.com/JmanuelJ/Resources-Myrepos/blob/main/Functions%20Speech-20240807T201426Z-001/Functions%20Speech/Second.Screen.jpg" height="150" alt="languages graph"  />
+</div>
 
 
 ## Arquitectura 
@@ -24,12 +26,33 @@
 ### * Constraint
 
 
-## API
-### [ElevenLabs:]([url](https://elevenlabs.io/docs/api-reference/text-to-speech))
+## API Reference
+
+#### Text To Speech Streaming
+
+```http
+  POST: /v1/text-to-speech/{voice_id}/stream
+```
+Header
+|--------------------------------------------------|
+| `xi-api-key` | `string` | **Requerido:**. Tu API key |
+
+
+Body
+|--------------------------------------------------|
+| `text` | `string` | **Requerido:** Texto a convertir |
+
+
+Path
+|--------------------------------------------------|
+| `voice_id` | `string` | **Requiere**. Voice|
+
+
+La API puede recibir mas parametros pero solo considere los obligatorios para relizar este ejemplo, para mas informacion al respecto consulta la documentacion en la pagina ofical de ElevenLabs.
 
 
 ## Licencia
-### MIT - Free software!
+### Free software!
 
 
 
