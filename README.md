@@ -16,10 +16,10 @@
 ### MVVM
 
 ## Libs
-### *Retrofit
-### *Okhttp
-### *Dagger Hilt
-### *Constraint
+### * Retrofit
+### * Okhttp
+### * Dagger Hilt
+### * Constraint
 
 
 ## API
