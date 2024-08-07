@@ -13,7 +13,7 @@ interface ApiService {
     @Headers(
         "Accept: audio/mpeg",
         "Content-Type: application/json",
-        "xi-api-key: 9a7f970e87602fe58cab3bf83b896a9e"
+        "xi-api-key: Aqui pon tu api key"
     )
     suspend fun textToSpeech(
         @Path("voice_id") voice: String,
